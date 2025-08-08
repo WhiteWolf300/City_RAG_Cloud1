@@ -1,0 +1,1807 @@
+---
+insertId: 6895ab90000be8765b685cae
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:47:29.030032270Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  External URL: http://34.96.47.97:8080'
+timestamp: '2025-08-08T07:47:28.780406Z'
+---
+insertId: 6895ab90000be7ffab838e26
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:47:29.030032270Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Network URL: http://169.254.8.1:8080'
+timestamp: '2025-08-08T07:47:28.780287Z'
+---
+insertId: 6895ab90000be7afed9a8855
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:47:29.030032270Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Local URL: http://localhost:8080'
+timestamp: '2025-08-08T07:47:28.780207Z'
+---
+insertId: 6895ab90000a894a7e0177b5
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:47:28.696530671Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  You can now view your Streamlit app in your browser.'
+timestamp: '2025-08-08T07:47:28.690506Z'
+---
+insertId: uemnfdnkt0
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 8f2f68f5-0aaa-4a48-8550-2b0f676828c7
+        run.googleapis.com/urls: '["https://city-rag-app-692323177471.us-central1.run.app","https://city-rag-app-wwn457pqzq-uc.a.run.app"]'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+        serving.knative.dev/lastModifier: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:13:35.566449Z'
+      generation: 3
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: city-rag-app
+      namespace: '692323177471'
+      resourceVersion: AAY71cQSWK0
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/services/city-rag-app
+      uid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '20'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 532.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: yirhrztrwv
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - image: gcr.io/city-rag1/city-rag-app
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      address:
+        url: https://city-rag-app-wwn457pqzq-uc.a.run.app
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:46:03.873453Z'
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:46:02.574903Z'
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2025-08-08T07:46:03.840567Z'
+        status: 'True'
+        type: RoutesReady
+      latestCreatedRevisionName: city-rag-app-00003-dqq
+      latestReadyRevisionName: city-rag-app-00003-dqq
+      observedGeneration: 3
+      traffic:
+      - latestRevision: true
+        percent: 100
+        revisionName: city-rag-app-00003-dqq
+      url: https://city-rag-app-wwn457pqzq-uc.a.run.app
+  serviceName: run.googleapis.com
+  status:
+    message: Ready condition status changed to True for Service city-rag-app.
+receiveTimestamp: '2025-08-08T07:46:04.421112778Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2025-08-08T07:46:03.883451Z'
+---
+insertId: -krd5rxe2tlgu
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/city-rag1/revisions/city-rag-app-00003-dqq
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '20'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/operation-id: 8f2f68f5-0aaa-4a48-8550-2b0f676828c7
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:45:30.369820Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: yirhrztrwv
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: city-rag-app
+        serving.knative.dev/configurationGeneration: '3'
+        serving.knative.dev/route: city-rag-app
+        serving.knative.dev/service: city-rag-app
+        serving.knative.dev/serviceUid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+      name: city-rag-app-00003-dqq
+      namespace: '692323177471'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: city-rag-app
+        uid: 81d06a06-bd78-4107-960a-e9b3564daa59
+      resourceVersion: AAY71cP99dc
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/revisions/city-rag-app-00003-dqq
+      uid: e7afc623-2d14-4da6-a74d-d9403b9eb879
+    spec:
+      containerConcurrency: 80
+      containers:
+      - image: gcr.io/city-rag1/city-rag-app@sha256:1a8d1bb48d858a69699c92ce0e424e6025459394214982885d83052f87525184
+        name: city-rag-app-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:46:02.537431Z'
+        message: Deploying revision succeeded in 32.16s.
+        status: 'True'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:46:02.497512Z'
+        message: Containers became healthy in 2.86s.
+        status: 'True'
+        type: ContainerHealthy
+      - lastTransitionTime: '2025-08-08T07:45:57.831500Z'
+        message: Container image import completed in 26.78s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2025-08-08T07:45:59.311520Z'
+        message: Provisioning imported containers completed in 1.48s. Checking container
+          health. This will wait for up to 4m for the configured startup probe, including
+          an initial delay of 0s.
+        status: 'True'
+        type: ResourcesAvailable
+      containerStatuses:
+      - imageDigest: gcr.io/city-rag1/city-rag-app@sha256:1a8d1bb48d858a69699c92ce0e424e6025459394214982885d83052f87525184
+        name: city-rag-app-1
+      imageDigest: gcr.io/city-rag1/city-rag-app@sha256:1a8d1bb48d858a69699c92ce0e424e6025459394214982885d83052f87525184
+      logUrl: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00003-dqq&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00003-dqq%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    message: 'Ready condition status changed to True for Revision city-rag-app-00003-dqq
+      with message: Deploying revision succeeded in 32.16s.'
+receiveTimestamp: '2025-08-08T07:46:02.921091718Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+timestamp: '2025-08-08T07:46:02.545259Z'
+---
+insertId: 6895ab3a00073a49802040ae
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:46:02.762766851Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+textPayload: Default STARTUP TCP probe succeeded after 1 attempt for container "city-rag-app-1"
+  on port 8080.
+timestamp: '2025-08-08T07:46:02.473673Z'
+---
+insertId: 6895ab3a000666a553825df4
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:46:02.426478767Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: Collecting usage statistics. To deactivate, set browser.gatherUsageStats
+  to false.
+timestamp: '2025-08-08T07:46:02.419493Z'
+---
+insertId: 6895ab3a000658a8478b5e14
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '            '
+timestamp: '2025-08-08T07:46:02.415912Z'
+---
+insertId: 6895ab3a000658a14608b642
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+timestamp: '2025-08-08T07:46:02.415905Z'
+---
+insertId: 6895ab3a0006589c914430ae
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: cross-origin resource sharing.
+timestamp: '2025-08-08T07:46:02.415900Z'
+---
+insertId: 6895ab3a0006589716e261fd
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: To do so, we must specify allowable origins, which places a restriction
+  on
+timestamp: '2025-08-08T07:46:02.415895Z'
+---
+insertId: 6895ab3a00065891519b3375
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: In order to protect against CSRF attacks, we send a cookie with each
+  request.
+timestamp: '2025-08-08T07:46:02.415889Z'
+---
+insertId: 6895ab3a0006588cfa679986
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: 'More information:'
+timestamp: '2025-08-08T07:46:02.415884Z'
+---
+insertId: 6895ab3a000658860612074c
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: As a result, 'server.enableCORS' is being overridden to 'true'.
+timestamp: '2025-08-08T07:46:02.415878Z'
+---
+insertId: 6895ab3a0006588240067661
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "'server.enableXsrfProtection=true'."
+timestamp: '2025-08-08T07:46:02.415874Z'
+---
+insertId: 6895ab3a0006587cec31928b
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "Warning: the config option 'server.enableCORS=false' is not compatible\
+  \ with"
+timestamp: '2025-08-08T07:46:02.415868Z'
+---
+insertId: 6895ab3a00065849417b8dd6
+labels:
+  instanceId: 0069c7a98806d15615ac025640aa5c5cc26538cc9707fe6a714f930eb00dc34712ac9a811b69e8722bee8ecfd2b9cb466da7999cc93139be297fabdb20426ca5b7af9c488afb4b4f301193289eb9a314
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:46:02.420842922Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '2025-08-08 07:46:02.415 '
+timestamp: '2025-08-08T07:46:02.415817Z'
+---
+insertId: 6895ab37000681345240c68b
+labels:
+  scaling_reason: DEPLOYMENT_ROLLOUT
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:45:59.431148170Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00003-dqq
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+textPayload: 'Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started
+  due to traffic shifting between revisions due to deployment, traffic split adjustment,
+  or deployment health check.'
+timestamp: '2025-08-08T07:45:59.426292Z'
+---
+insertId: zu3nmte1pqyi
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: rajeshsarang22@gmail.com
+    principalSubject: user:rajeshsarang22@gmail.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes:
+      name: namespaces/city-rag1/services/city-rag-app
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/city-rag1/services/city-rag-app
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 532.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 2b64ab4e-e454-4fcf-b3d0-39712264c357
+          run.googleapis.com/urls: '["https://city-rag-app-692323177471.us-central1.run.app"]'
+          serving.knative.dev/creator: rajeshsarang22@gmail.com
+          serving.knative.dev/lastModifier: rajeshsarang22@gmail.com
+        creationTimestamp: '2025-08-08T07:13:35.566449Z'
+        generation: 2
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: city-rag-app
+        namespace: '692323177471'
+        resourceVersion: AAY71Zk2+uU
+        selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/services/city-rag-app
+        uid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '20'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 532.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: yirhrztrwv
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            containers:
+            - image: gcr.io/city-rag1/city-rag-app
+              resources:
+                limits:
+                  cpu: 1000m
+                  memory: 512Mi
+            serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2025-08-08T07:34:04.800987Z'
+          reason: HealthCheckContainerError
+          status: 'False'
+          type: Ready
+        - lastTransitionTime: '2025-08-08T07:34:04.782738Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2025-08-08T07:34:04.800987Z'
+          reason: HealthCheckContainerError
+          status: 'False'
+          type: RoutesReady
+        latestCreatedRevisionName: city-rag-app-00002-bv7
+        observedGeneration: 2
+  requestMetadata:
+    callerIp: 34.124.144.22
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/532.0.0 command/gcloud.run.deploy
+      invocation-id/3f2d7c5c6f0e453ab0dea577e81dc052 environment/devshell environment-version/None
+      client-os/LINUX client-os-ver/6.6.97 client-pltf-arch/x86_64 interactive/True
+      from-script/False python/3.12.10 term/screen (Linux 6.6.97+),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2025-08-08T07:45:30.327527Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2025-08-08T07:45:30.997606689Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2025-08-08T07:45:30.108669Z'
+---
+insertId: -bm3vg4e1hjz4
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 2b64ab4e-e454-4fcf-b3d0-39712264c357
+        run.googleapis.com/urls: '["https://city-rag-app-692323177471.us-central1.run.app"]'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+        serving.knative.dev/lastModifier: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:13:35.566449Z'
+      generation: 2
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: city-rag-app
+      namespace: '692323177471'
+      resourceVersion: AAY71Zk2+uU
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/services/city-rag-app
+      uid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '20'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 532.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: jlktmxcuxb
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - image: gcr.io/city-rag1/city-rag-app
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:34:04.800987Z'
+        message: |-
+          Revision 'city-rag-app-00002-bv7' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:34:04.782738Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2025-08-08T07:34:04.800987Z'
+        message: |-
+          Revision 'city-rag-app-00002-bv7' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: RoutesReady
+      latestCreatedRevisionName: city-rag-app-00002-bv7
+      observedGeneration: 2
+  serviceName: run.googleapis.com
+  status:
+    code: 9
+    message: |-
+      Ready condition status changed to False for Service city-rag-app with message: Revision 'city-rag-app-00002-bv7' is not ready and cannot serve traffic. The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+      Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+      For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+receiveTimestamp: '2025-08-08T07:34:05.026251570Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2025-08-08T07:34:04.866026Z'
+---
+insertId: pb8ja3ds0wa
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/city-rag1/revisions/city-rag-app-00002-bv7
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '20'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/operation-id: 2b64ab4e-e454-4fcf-b3d0-39712264c357
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:29:05.726805Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: jlktmxcuxb
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: city-rag-app
+        serving.knative.dev/configurationGeneration: '2'
+        serving.knative.dev/route: city-rag-app
+        serving.knative.dev/service: city-rag-app
+        serving.knative.dev/serviceUid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+      name: city-rag-app-00002-bv7
+      namespace: '692323177471'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: city-rag-app
+        uid: 81d06a06-bd78-4107-960a-e9b3564daa59
+      resourceVersion: AAY71Zk1P/Y
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/revisions/city-rag-app-00002-bv7
+      uid: 2024c4e6-b374-44a7-95f0-f19f175249b5
+    spec:
+      containerConcurrency: 80
+      containers:
+      - image: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+        name: city-rag-app-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:34:04.740598Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:34:04.740598Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: ContainerHealthy
+      - lastTransitionTime: '2025-08-08T07:30:02.113641Z'
+        message: Container image import completed in 55.68s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2025-08-08T07:30:03.959694Z'
+        message: Provisioning imported containers completed in 1.9s. Checking container
+          health. This will wait for up to 4m for the configured startup probe, including
+          an initial delay of 0s.
+        status: 'True'
+        type: ResourcesAvailable
+      - lastTransitionTime: '2025-08-08T07:30:03.959694Z'
+        message: System will retry after 0:00:00 from lastTransitionTime for attempt
+          0.
+        reason: ImmediateRetry
+        severity: Info
+        status: 'True'
+        type: Retry
+      containerStatuses:
+      - imageDigest: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+        name: city-rag-app-1
+      imageDigest: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+      logUrl: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    code: 9
+    message: |-
+      Ready condition status changed to False for Revision city-rag-app-00002-bv7 with message: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+      Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00002-bv7&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00002-bv7%22 
+      For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+receiveTimestamp: '2025-08-08T07:34:05.126244961Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2025-08-08T07:34:04.755745Z'
+---
+insertId: 6895a86c0009a7c2735dc429
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:34:04.639987184Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Default STARTUP TCP probe failed 1 time consecutively for container "city-rag-app-1" on port 8080. The instance was not started.
+  Connection failed with status DEADLINE_EXCEEDED.
+timestamp: '2025-08-08T07:34:04.632770Z'
+---
+insertId: -5sknejdd6z8
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.ReplaceService
+  resourceName: namespaces/city-rag1/revisions/city-rag-app-00001-zwn
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Revision
+    apiVersion: serving.knative.dev/v1
+    kind: Revision
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '20'
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/operation-id: 2b64ab4e-e454-4fcf-b3d0-39712264c357
+        run.googleapis.com/startup-cpu-boost: 'true'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:13:35.968086Z'
+      generation: 1
+      labels:
+        client.knative.dev/nonce: zjqwzuhuhv
+        cloud.googleapis.com/location: us-central1
+        run.googleapis.com/startupProbeType: Default
+        serving.knative.dev/configuration: city-rag-app
+        serving.knative.dev/configurationGeneration: '1'
+        serving.knative.dev/route: city-rag-app
+        serving.knative.dev/service: city-rag-app
+        serving.knative.dev/serviceUid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+      name: city-rag-app-00001-zwn
+      namespace: '692323177471'
+      ownerReferences:
+      - apiVersion: serving.knative.dev/v1
+        blockOwnerDeletion: true
+        controller: true
+        kind: Configuration
+        name: city-rag-app
+        uid: 81d06a06-bd78-4107-960a-e9b3564daa59
+      resourceVersion: AAY71ZkrXaE
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/revisions/city-rag-app-00001-zwn
+      uid: 4ebb3eb0-89c1-496a-866b-9b5236b5b6b6
+    spec:
+      containerConcurrency: 80
+      containers:
+      - image: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+        name: city-rag-app-1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 1000m
+            memory: 512Mi
+        startupProbe:
+          failureThreshold: 1
+          periodSeconds: 240
+          tcpSocket:
+            port: 8080
+          timeoutSeconds: 240
+      serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+      timeoutSeconds: 300
+    status:
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:34:04.092833Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00001-zwn&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00001-zwn%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:34:04.092833Z'
+        message: |-
+          The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+          Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00001-zwn&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00001-zwn%22 
+          For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+        reason: HealthCheckContainerError
+        status: 'False'
+        type: ContainerHealthy
+      - lastTransitionTime: '2025-08-08T07:30:01.985562Z'
+        message: Container image import completed in 55.59s.
+        status: 'True'
+        type: ContainerReady
+      - lastTransitionTime: '2025-08-08T07:30:03.621916Z'
+        message: Provisioning imported containers completed in 1.63s. Checking container
+          health. This will wait for up to 4m for the configured startup probe, including
+          an initial delay of 0s.
+        status: 'True'
+        type: ResourcesAvailable
+      - lastTransitionTime: '2025-08-08T07:30:03.621916Z'
+        message: System will retry after 0:00:00 from lastTransitionTime for attempt
+          0.
+        reason: ImmediateRetry
+        severity: Info
+        status: 'True'
+        type: Retry
+      containerStatuses:
+      - imageDigest: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+        name: city-rag-app-1
+      imageDigest: gcr.io/city-rag1/city-rag-app@sha256:483984554ac5cb1435372471e411391e8c157c9d1d963773717d726c3b474bdf
+      logUrl: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00001-zwn&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00001-zwn%22
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    code: 9
+    message: |-
+      Ready condition status changed to False for Revision city-rag-app-00001-zwn with message: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable within the allocated timeout. This can happen when the container port is misconfigured or if the timeout is too short. The health check timeout can be extended. Logs for this revision might contain more information.
+
+      Logs URL: https://console.cloud.google.com/logs/viewer?project=city-rag1&resource=cloud_run_revision/service_name/city-rag-app/revision_name/city-rag-app-00001-zwn&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22city-rag-app%22%0Aresource.labels.revision_name%3D%22city-rag-app-00001-zwn%22 
+      For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+receiveTimestamp: '2025-08-08T07:34:04.803080789Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2025-08-08T07:34:04.104418Z'
+---
+insertId: 6895a86b000e71d520f2dd77
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:34:03.953307965Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+textPayload: |-
+  Default STARTUP TCP probe failed 1 time consecutively for container "city-rag-app-1" on port 8080. The instance was not started.
+  Connection failed with status DEADLINE_EXCEEDED.
+timestamp: '2025-08-08T07:34:03.946645Z'
+---
+insertId: 6895a77f0006aca61c7f1476
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.710559410Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  External URL: http://34.96.45.127:8501'
+timestamp: '2025-08-08T07:30:07.437414Z'
+---
+insertId: 6895a77f0006abf37fd0c995
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.710559410Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Network URL: http://169.254.8.1:8501'
+timestamp: '2025-08-08T07:30:07.437235Z'
+---
+insertId: 6895a77f0006abb4ab4a10a7
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.710559410Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Local URL: http://localhost:8501'
+timestamp: '2025-08-08T07:30:07.437172Z'
+---
+insertId: 6895a77f0006ab6dbb21f815
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.710559410Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  You can now view your Streamlit app in your browser.'
+timestamp: '2025-08-08T07:30:07.437101Z'
+---
+insertId: 6895a77e000d3f877abb7558
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.132802310Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  External URL: http://34.96.45.255:8501'
+timestamp: '2025-08-08T07:30:06.868231Z'
+---
+insertId: 6895a77e000d3f60450b8764
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.132802310Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Network URL: http://169.254.8.1:8501'
+timestamp: '2025-08-08T07:30:06.868192Z'
+---
+insertId: 6895a77e000d3f5d4be28ca8
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.132802310Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  Local URL: http://localhost:8501'
+timestamp: '2025-08-08T07:30:06.868189Z'
+---
+insertId: 6895a77e000d3f5491cf2bc4
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:07.132802310Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '  You can now view your Streamlit app in your browser.'
+timestamp: '2025-08-08T07:30:06.868180Z'
+---
+insertId: 6895a77e000ac4263874079c
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:06.710672401Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: Collecting usage statistics. To deactivate, set browser.gatherUsageStats
+  to false.
+timestamp: '2025-08-08T07:30:06.705574Z'
+---
+insertId: 6895a77e000abe5460657689
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '            '
+timestamp: '2025-08-08T07:30:06.704084Z'
+---
+insertId: 6895a77e000abe4ef58c579f
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+timestamp: '2025-08-08T07:30:06.704078Z'
+---
+insertId: 6895a77e000abe4800a1ddc7
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: cross-origin resource sharing.
+timestamp: '2025-08-08T07:30:06.704072Z'
+---
+insertId: 6895a77e000abe44c3123fc7
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: To do so, we must specify allowable origins, which places a restriction
+  on
+timestamp: '2025-08-08T07:30:06.704068Z'
+---
+insertId: 6895a77e000abe3edd05cebf
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: In order to protect against CSRF attacks, we send a cookie with each
+  request.
+timestamp: '2025-08-08T07:30:06.704062Z'
+---
+insertId: 6895a77e000abe3841a8e364
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: 'More information:'
+timestamp: '2025-08-08T07:30:06.704056Z'
+---
+insertId: 6895a77e000abe3115abbba3
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: As a result, 'server.enableCORS' is being overridden to 'true'.
+timestamp: '2025-08-08T07:30:06.704049Z'
+---
+insertId: 6895a77e000abe2a7f421db6
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "'server.enableXsrfProtection=true'."
+timestamp: '2025-08-08T07:30:06.704042Z'
+---
+insertId: 6895a77e000abe24dd90b04a
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "Warning: the config option 'server.enableCORS=false' is not compatible\
+  \ with"
+timestamp: '2025-08-08T07:30:06.704036Z'
+---
+insertId: 6895a77e000abdf05b603263
+labels:
+  instanceId: 0069c7a98888f896b0467b8951afdf30d1e0fcf8fd47d1048029dc4e0d77ac809f41baca35410e6e2ae706bbe9642f4684319c4ab790625bd6dc88f193159805ecc0f5dd7f86fb299ab084d5856115
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.707333887Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '2025-08-08 07:30:06.705 '
+timestamp: '2025-08-08T07:30:06.703984Z'
+---
+insertId: 6895a77e0001f698be1cd8f7
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstdout
+receiveTimestamp: '2025-08-08T07:30:06.133831154Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: Collecting usage statistics. To deactivate, set browser.gatherUsageStats
+  to false.
+timestamp: '2025-08-08T07:30:06.128664Z'
+---
+insertId: 6895a77e0001f08ab9e1ba4f
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '            '
+timestamp: '2025-08-08T07:30:06.127114Z'
+---
+insertId: 6895a77e0001f086d061e816
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: If cross origin resource sharing is required, please disable server.enableXsrfProtection.
+timestamp: '2025-08-08T07:30:06.127110Z'
+---
+insertId: 6895a77e0001f083cb3965fe
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: cross-origin resource sharing.
+timestamp: '2025-08-08T07:30:06.127107Z'
+---
+insertId: 6895a77e0001f0801708715d
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: To do so, we must specify allowable origins, which places a restriction
+  on
+timestamp: '2025-08-08T07:30:06.127104Z'
+---
+insertId: 6895a77e0001f07dc109fc4d
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: In order to protect against CSRF attacks, we send a cookie with each
+  request.
+timestamp: '2025-08-08T07:30:06.127101Z'
+---
+insertId: 6895a77e0001f079c281a686
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: 'More information:'
+timestamp: '2025-08-08T07:30:06.127097Z'
+---
+insertId: 6895a77e0001f0755dcac970
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: As a result, 'server.enableCORS' is being overridden to 'true'.
+timestamp: '2025-08-08T07:30:06.127093Z'
+---
+insertId: 6895a77e0001f072a46d160a
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "'server.enableXsrfProtection=true'."
+timestamp: '2025-08-08T07:30:06.127090Z'
+---
+insertId: 6895a77e0001f06eb5c0c63d
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: "Warning: the config option 'server.enableCORS=false' is not compatible\
+  \ with"
+timestamp: '2025-08-08T07:30:06.127086Z'
+---
+insertId: 6895a77e0001f0499caa5ade
+labels:
+  instanceId: 0069c7a9883a3a8cb618db2de37724dbef3897c3e56827195c27180abc5acb311ae5ce3b6db7451f22a11bde622c69753ae7c8c4afc2a7f715787a91928c4fd3672e6c31eef37c91967d897ade2b30
+logName: projects/city-rag1/logs/run.googleapis.com%2Fstderr
+receiveTimestamp: '2025-08-08T07:30:06.132963038Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+textPayload: '2025-08-08 07:30:06.127 '
+timestamp: '2025-08-08T07:30:06.127049Z'
+---
+insertId: 6895a77c000763fde462ed83
+labels:
+  scaling_reason: DEPLOYMENT_ROLLOUT
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:30:04.489811620Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00002-bv7
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+textPayload: 'Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started
+  due to traffic shifting between revisions due to deployment, traffic split adjustment,
+  or deployment health check.'
+timestamp: '2025-08-08T07:30:04.484349Z'
+---
+insertId: 6895a77b000c22e7204bcd52
+labels:
+  scaling_reason: DEPLOYMENT_ROLLOUT
+logName: projects/city-rag1/logs/run.googleapis.com%2Fvarlog%2Fsystem
+receiveTimestamp: '2025-08-08T07:30:03.800482848Z'
+resource:
+  labels:
+    configuration_name: city-rag-app
+    location: us-central1
+    project_id: city-rag1
+    revision_name: city-rag-app-00001-zwn
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: INFO
+textPayload: 'Starting new instance. Reason: DEPLOYMENT_ROLLOUT - Instance started
+  due to traffic shifting between revisions due to deployment, traffic split adjustment,
+  or deployment health check.'
+timestamp: '2025-08-08T07:30:03.795367Z'
+---
+insertId: 1xddvf6e1lb0h
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: rajeshsarang22@gmail.com
+    principalSubject: user:rajeshsarang22@gmail.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.update
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes:
+      name: namespaces/city-rag1/services/city-rag-app
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.ReplaceService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.ReplaceServiceRequest
+    name: namespaces/city-rag1/services/city-rag-app
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 532.0.0
+          run.googleapis.com/ingress: all
+          run.googleapis.com/ingress-status: all
+          run.googleapis.com/operation-id: 9b073916-3107-4392-9a46-4af0078c11bf
+          run.googleapis.com/urls: '["https://city-rag-app-692323177471.us-central1.run.app"]'
+          serving.knative.dev/creator: rajeshsarang22@gmail.com
+          serving.knative.dev/lastModifier: rajeshsarang22@gmail.com
+        creationTimestamp: '2025-08-08T07:13:35.566449Z'
+        generation: 1
+        labels:
+          cloud.googleapis.com/location: us-central1
+        name: city-rag-app
+        namespace: '692323177471'
+        resourceVersion: AAY71VRa8r4
+        selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/services/city-rag-app
+        uid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+      spec:
+        template:
+          metadata:
+            annotations:
+              autoscaling.knative.dev/maxScale: '20'
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 532.0.0
+              run.googleapis.com/startup-cpu-boost: 'true'
+            labels:
+              client.knative.dev/nonce: jlktmxcuxb
+              run.googleapis.com/startupProbeType: Default
+          spec:
+            containerConcurrency: 80
+            containers:
+            - image: gcr.io/city-rag1/city-rag-app
+              resources:
+                limits:
+                  cpu: 1000m
+                  memory: 512Mi
+            serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+            timeoutSeconds: 300
+        traffic:
+        - latestRevision: true
+          percent: 100
+      status:
+        conditions:
+        - lastTransitionTime: '2025-08-08T07:14:48.708089Z'
+          reason: RevisionFailed
+          status: 'False'
+          type: Ready
+        - lastTransitionTime: '2025-08-08T07:13:36.162692Z'
+          status: 'True'
+          type: ConfigurationsReady
+        - lastTransitionTime: '2025-08-08T07:14:48.708089Z'
+          reason: RevisionFailed
+          status: 'False'
+          type: RoutesReady
+        latestCreatedRevisionName: city-rag-app-00001-zwn
+        observedGeneration: 1
+  requestMetadata:
+    callerIp: 34.124.144.22
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/532.0.0 command/gcloud.run.deploy
+      invocation-id/016fb05a606c43b9a7d2b45e3dd087d3 environment/devshell environment-version/None
+      client-os/LINUX client-os-ver/6.6.97 client-pltf-arch/x86_64 interactive/True
+      from-script/False python/3.12.10 term/screen (Linux 6.6.97+),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2025-08-08T07:29:05.667230Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2025-08-08T07:29:05.808279978Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2025-08-08T07:29:05.428383Z'
+---
+insertId: alva3me21pi8
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Fsystem_event
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  methodName: /Services.CreateService
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  response:
+    '@type': type.googleapis.com/google.cloud.run.v1.Service
+    apiVersion: serving.knative.dev/v1
+    kind: Service
+    metadata:
+      annotations:
+        run.googleapis.com/client-name: gcloud
+        run.googleapis.com/client-version: 532.0.0
+        run.googleapis.com/ingress: all
+        run.googleapis.com/ingress-status: all
+        run.googleapis.com/operation-id: 9b073916-3107-4392-9a46-4af0078c11bf
+        run.googleapis.com/urls: '["https://city-rag-app-692323177471.us-central1.run.app"]'
+        serving.knative.dev/creator: rajeshsarang22@gmail.com
+        serving.knative.dev/lastModifier: rajeshsarang22@gmail.com
+      creationTimestamp: '2025-08-08T07:13:35.566449Z'
+      generation: 1
+      labels:
+        cloud.googleapis.com/location: us-central1
+      name: city-rag-app
+      namespace: '692323177471'
+      resourceVersion: AAY71VRa8r4
+      selfLink: /apis/serving.knative.dev/v1/namespaces/692323177471/services/city-rag-app
+      uid: d18311cc-b812-4b4c-9f00-ed2606db8ddd
+    spec:
+      template:
+        metadata:
+          annotations:
+            autoscaling.knative.dev/maxScale: '20'
+            run.googleapis.com/client-name: gcloud
+            run.googleapis.com/client-version: 532.0.0
+            run.googleapis.com/startup-cpu-boost: 'true'
+          labels:
+            client.knative.dev/nonce: zjqwzuhuhv
+            run.googleapis.com/startupProbeType: Default
+        spec:
+          containerConcurrency: 80
+          containers:
+          - image: gcr.io/city-rag1/city-rag-app
+            ports:
+            - containerPort: 8080
+              name: http1
+            resources:
+              limits:
+                cpu: 1000m
+                memory: 512Mi
+            startupProbe:
+              failureThreshold: 1
+              periodSeconds: 240
+              tcpSocket:
+                port: 8080
+              timeoutSeconds: 240
+          serviceAccountName: 692323177471-compute@developer.gserviceaccount.com
+          timeoutSeconds: 300
+      traffic:
+      - latestRevision: true
+        percent: 100
+    status:
+      conditions:
+      - lastTransitionTime: '2025-08-08T07:14:48.708089Z'
+        message: Revision 'city-rag-app-00001-zwn' is not ready and cannot serve traffic.
+          Image 'gcr.io/city-rag1/city-rag-app' not found.
+        reason: RevisionFailed
+        status: 'False'
+        type: Ready
+      - lastTransitionTime: '2025-08-08T07:13:36.162692Z'
+        message: Image 'gcr.io/city-rag1/city-rag-app' not found.
+        status: 'True'
+        type: ConfigurationsReady
+      - lastTransitionTime: '2025-08-08T07:14:48.708089Z'
+        message: Revision 'city-rag-app-00001-zwn' is not ready and cannot serve traffic.
+          Image 'gcr.io/city-rag1/city-rag-app' not found.
+        reason: RevisionFailed
+        status: 'False'
+        type: RoutesReady
+      latestCreatedRevisionName: city-rag-app-00001-zwn
+      observedGeneration: 1
+  serviceName: run.googleapis.com
+  status:
+    code: 5
+    message: "Ready condition status changed to False for Service city-rag-app with\
+      \ message: Revision 'city-rag-app-00001-zwn' is not ready and cannot serve traffic.\
+      \ Image 'gcr.io/city-rag1/city-rag-app' not found."
+receiveTimestamp: '2025-08-08T07:14:50.599202058Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: ERROR
+timestamp: '2025-08-08T07:14:49.595662Z'
+---
+insertId: 1dg68rne2hzxu
+logName: projects/city-rag1/logs/cloudaudit.googleapis.com%2Factivity
+protoPayload:
+  '@type': type.googleapis.com/google.cloud.audit.AuditLog
+  authenticationInfo:
+    principalEmail: rajeshsarang22@gmail.com
+    principalSubject: user:rajeshsarang22@gmail.com
+  authorizationInfo:
+  - granted: true
+    permission: run.services.create
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes: {}
+  - granted: true
+    permission: run.services.create
+    permissionType: ADMIN_WRITE
+    resource: namespaces/city-rag1/services/city-rag-app
+    resourceAttributes:
+      name: namespaces/city-rag1/services/city-rag-app
+      service: run.googleapis.com/
+      type: run.googleapis.com/Service
+  methodName: google.cloud.run.v1.Services.CreateService
+  request:
+    '@type': type.googleapis.com/google.cloud.run.v1.CreateServiceRequest
+    parent: namespaces/city-rag1
+    service:
+      apiVersion: serving.knative.dev/v1
+      kind: Service
+      metadata:
+        annotations:
+          run.googleapis.com/client-name: gcloud
+          run.googleapis.com/client-version: 532.0.0
+        name: city-rag-app
+        namespace: city-rag1
+      spec:
+        template:
+          metadata:
+            annotations:
+              run.googleapis.com/client-name: gcloud
+              run.googleapis.com/client-version: 532.0.0
+              run.googleapis.com/startup-cpu-boost: 'True'
+            labels:
+              client.knative.dev/nonce: zjqwzuhuhv
+          spec:
+            containers:
+            - image: gcr.io/city-rag1/city-rag-app
+              name: ''
+      status: {}
+  requestMetadata:
+    callerIp: 34.124.144.22
+    callerSuppliedUserAgent: google-cloud-sdk gcloud/532.0.0 command/gcloud.run.deploy
+      invocation-id/b3cd273073ac4d488fb12c55b64e5721 environment/devshell environment-version/None
+      client-os/LINUX client-os-ver/6.6.97 client-pltf-arch/x86_64 interactive/True
+      from-script/False python/3.12.10 term/screen (Linux 6.6.97+),gzip(gfe)
+    destinationAttributes: {}
+    requestAttributes:
+      auth: {}
+      time: '2025-08-08T07:13:35.825460Z'
+  resourceLocation:
+    currentLocations:
+    - us-central1
+  resourceName: namespaces/city-rag1/services/city-rag-app
+  serviceName: run.googleapis.com
+receiveTimestamp: '2025-08-08T07:13:36.001502030Z'
+resource:
+  labels:
+    configuration_name: ''
+    location: us-central1
+    project_id: city-rag1
+    revision_name: ''
+    service_name: city-rag-app
+  type: cloud_run_revision
+severity: NOTICE
+timestamp: '2025-08-08T07:13:35.332700Z'
